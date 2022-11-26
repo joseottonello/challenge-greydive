@@ -1,16 +1,24 @@
+import { useState, useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Container from './components/container/Container'
+import Item from './components/itemContainer/Item'
 import data from './mock/data.json'
 
 const App = () => {
+    const [items, setItems ] = useState([])
 
-    console.log(data.map((information) => information))
+    useEffect(() => {
+        setItems(data)
+    }, [])
 
     return (
-        <div className="container mx-auto px-4">
-            {
-                data.map((response) => (
-                    <h1>{response.escenario}</h1>
-                ))
-            }
+        <div className="container flex justify-center">
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Container items={items}/>}></Route>
+                    <Route path='/:cliente' element={<Item items={items}/>}></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     )
 }
