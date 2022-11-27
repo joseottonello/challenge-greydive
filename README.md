@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Distribucion de Componentes
+A modo de guia y tomando de refencia la pantalla al iniciar el proyecto, los componentes se encuentran distribuidos de la siguiente manera:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+En el archivo `App`, se encontrara el archivo general desde donde se realiza la importacion del archivo JSON con los datos, se almacena en un estado mediante la utilizacion del hook useState y con el uso de propiedades se envia al resto de los componentes.
+Tambien se encuentra el gestor de rutas de React Router.
 
-## Available Scripts
+En la carpeta `container`, se encuentra el archivo `Container` dondes se encuentra el texto principal a modo de referencia y el mapeo correspondiente a la iteracion del archivo JSON.
 
-In the project directory, you can run:
+En la carpeta `custom` se encuentran dos archivos, uno es `Card` donde se encuentra el desarrollo y la estilizacion de las tarjetas que se ven en la pantalla principal al iniciar la pagina y otro archivo llamado `Header` que contiene enlaces de redireccionamiento en la segunda etapa de la pagina.
 
-### `npm start`
+Por ultimo, en la carpeta `itemContainer` se encuentran el archivo `Item` el cual contiene los datos de las tarjetas que se mostraran en la segunda etapa de la pagina.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Librerias utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para la estilizacion de mis componentes utilice la libreria [Tailwind CSS](https://tailwindcss.com/) la cual me parecio la mas practica y rapida para la ocasion.
 
-### `npm test`
+Y para crear rutas dinamicas utilice la libreria [React Router](https://reactrouter.com/en/main/) para evitar recargar la pagina y ofrecer una visualizacion mas eficiente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Deployment
+[Greydive Challenge](challenge-greydive-nine.vercel.app)
